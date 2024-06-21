@@ -1,106 +1,120 @@
-// local storage >> veriler bi silinene kadar durur
-// session storage >> veriler sekme kapatılınca silinir
+// //Proje
 
-// setItem(anahtar,değer)
-//veri ekleyeceksem>>>istedğim veriyi saklayabiliyorum
-localStorage.setItem("deneme", "denemelik veri");
+// const bars = document.querySelector(".fa-bars");
+// const sidebar = document.querySelector(".sidebar");
+// const closingButton = document.querySelector(".fa-times");
 
-//veri çekeceksem >>>> yalnızca anahtar>>>istediğim veriyi çekebiliyorum
-const localVeri = localStorage.getItem("deneme");
+// bars.addEventListener("click", () => {
+//   sidebar.classList.toggle("show-sidebar");
+// });
 
-console.log(localVeri);
+// closingButton.addEventListener("click", () => {
+//   sidebar.classList.remove("show-sidebar");
+// });
 
-//.removeItem() > veriyi siler
-localStorage.removeItem("deneme");
+// // local storage >> veriler bi silinene kadar durur
+// // session storage >> veriler sekme kapatılınca silinir
 
-// THIS >> Hem javascripte hem de java. frameworklarında çokça kullanılan bir tanım var.react,vue,anguler gibi fram.
+// // setItem(anahtar,değer)
+// //veri ekleyeceksem>>>istedğim veriyi saklayabiliyorum
+// localStorage.setItem("deneme", "denemelik veri");
 
-//bir obje kendi içerisinde kendi değerlerine erişmek için kullanılır
-const car = {
-  marka: "BMW",
-  model: "M5",
-  year: 2016,
-  start: function () {
-    //return this.model + " " + this.marka + " çalıştı";
-    //return ` ${this.marka} , ${this.model} çalıştı...`;
-    //return this;
-  },
-};
+// //veri çekeceksem >>>> yalnızca anahtar>>>istediğim veriyi çekebiliyorum
+// const localVeri = localStorage.getItem("deneme");
 
-//alert(car.model);
-//alert(car.start());
+// console.log(localVeri);
 
-//console.log(car.start());
+// //.removeItem() > veriyi siler
+// localStorage.removeItem("deneme");
 
-//OOP > Objeleri didikleyeceğimiz inceleyeceğimiz classlar konusu.Bu classlar
-//bir çok yazılım dilinde vardır ve bu classlar sayesinde bazı obje kalıpları
-//oluşturup bu classlardan bir çok objeyi oluşturabiliyoruz.Ve bu classlar sadece
-//javascrıptte değil C+ gibi Cshut java gibi bir çok yazılım dilinde kullanılan
-//yapılardır classlar.
+// // THIS >> Hem javascripte hem de java. frameworklarında çokça kullanılan bir tanım var.react,vue,anguler gibi fram.
 
-//---------OOP
-//---Javascript objeye yönelik programlama dilidir.
-//---Jv da gördüğümüz neredeyse herşey objelerden oluşur.
-//---OOP DİR.JV objeye yönelik programlama dilidir.
+// //bir obje kendi içerisinde kendi değerlerine erişmek için kullanılır
+// const car = {
+//   marka: "BMW",
+//   model: "M5",
+//   year: 2016,
+//   start: function () {
+//     //return this.model + " " + this.marka + " çalıştı";
+//     //return ` ${this.marka} , ${this.model} çalıştı...`;
+//     //return this;
+//   },
+// };
 
-//--objelerden oluşmayan bazı şeyler var
-//--Pirimitive(ilkel) DEĞERLER: Number, string, boolean(True-false), undefined null
-//ilkel obje olmayan verilerdir.bunlar dışında javascpritte olan herşey objelerden
-// oluşur.
-// diğer herşey object > Date Math Array Function
+// //alert(car.model);
+// //alert(car.start());
 
-// Object Literal > Oluştur ve direkt değer ver.
+// //console.log(car.start());
 
-let selin = {
-  name: "selin",
-  bDay: 2020,
-  job: "yazilim",
-};
+// //OOP > Objeleri didikleyeceğimiz inceleyeceğimiz classlar konusu.Bu classlar
+// //bir çok yazılım dilinde vardır ve bu classlar sayesinde bazı obje kalıpları
+// //oluşturup bu classlardan bir çok objeyi oluşturabiliyoruz.Ve bu classlar sadece
+// //javascrıptte değil C+ gibi Cshut java gibi bir çok yazılım dilinde kullanılan
+// //yapılardır classlar.
 
-let inci = {
-  name: "inci",
-  bDay: 2014,
-  job: "öğrenci",
-};
+// //---------OOP
+// //---Javascript objeye yönelik programlama dilidir.
+// //---Jv da gördüğümüz neredeyse herşey objelerden oluşur.
+// //---OOP DİR.JV objeye yönelik programlama dilidir.
 
-//bir tane fonksiyon yazmak ve bizim yerimize böyle oluşturmasını sağlamak
+// //--objelerden oluşmayan bazı şeyler var
+// //--Pirimitive(ilkel) DEĞERLER: Number, string, boolean(True-false), undefined null
+// //ilkel obje olmayan verilerdir.bunlar dışında javascpritte olan herşey objelerden
+// // oluşur.
+// // diğer herşey object > Date Math Array Function
 
-//obje oluşturmak için kullanılan fonksiyon
+// // Object Literal > Oluştur ve direkt değer ver.
 
-function Person(Dname, Dbirt, Djob) {
-  this.name = Dname;
-  this.bDay = Dbirt;
-  this.job = Djob;
-  //herbir objeyi ekrana basar
-  console.log(this);
-}
+// let selin = {
+//   name: "selin",
+//   bDay: 2020,
+//   job: "yazilim",
+// };
 
-// person kalıbından çıkacak bir obje oluşturma
-let selin1 = new Person("Deneme", 2014, "yazilim");
-let inci1 = new Person("İnci", 1879, "öğrenci");
+// let inci = {
+//   name: "inci",
+//   bDay: 2014,
+//   job: "öğrenci",
+// };
 
-//console.log(selin1);
-//console.log(inci1);
+// //bir tane fonksiyon yazmak ve bizim yerimize böyle oluşturmasını sağlamak
 
-//prototype >bir objenin özelliklerinin ve davranışlarının yer aldığı bir yapıdırPrototype sayesinde objenin kendine ait olmayan özelliklerinin tanımlayabiliyoruz.
+// //obje oluşturmak için kullanılan fonksiyon
 
-//Prototype > Bir objenin kendine ait olmayan ancak o objeye ait bir özellikmiş
-//gibi gözükmesini istediğimiz eğerleri içerir.
-//arabanın prototype.
+// function Person(Dname, Dbirt, Djob) {
+//   this.name = Dname;
+//   this.bDay = Dbirt;
+//   this.job = Djob;
+//   //herbir objeyi ekrana basar
+//   console.log(this);
+// }
 
-Person.prototype.yasHesapla = function () {
-  return 2023 - this.bDay;
-};
+// // person kalıbından çıkacak bir obje oluşturma
+// let selin1 = new Person("Deneme", 2014, "yazilim");
+// let inci1 = new Person("İnci", 1879, "öğrenci");
 
-let yasliAdam = new Person("mehmet", 1950, "deneme");
+// //console.log(selin1);
+// //console.log(inci1);
 
-console.log(yasliAdam.yasHesapla());
+// //prototype >bir objenin özelliklerinin ve davranışlarının yer aldığı bir yapıdırPrototype sayesinde objenin kendine ait olmayan özelliklerinin tanımlayabiliyoruz.
 
-const hesaplananYas = yasliAdam.yasHesapla();
+// //Prototype > Bir objenin kendine ait olmayan ancak o objeye ait bir özellikmiş
+// //gibi gözükmesini istediğimiz eğerleri içerir.
+// //arabanın prototype.
 
-yasliAdam.yas = hesaplananYas;
+// Person.prototype.yasHesapla = function () {
+//   return 2023 - this.bDay;
+// };
 
-//--------CLASS(sınıf) > java.benzer özelliklere ve fonksiyonlara sahip objelerin bir şablonudur.
+// let yasliAdam = new Person("mehmet", 1950, "deneme");
+
+// console.log(yasliAdam.yasHesapla());
+
+// const hesaplananYas = yasliAdam.yasHesapla();
+
+// yasliAdam.yas = hesaplananYas;
+
+//--------CLASS(sınıf) > javascriptte benzer özelliklere ve fonksiyonlara sahip objelerin bir şablonudur.
 //daha demein gördüğümüz fonksiyonla aynı mantıkta çalışan ekstra özellikleri olan ve
 // es6 ile geldiğini de bilmemiz yeterli.
 //java sınıfları sayesinde bir nesne oluşturmadan önce özelliklerini ve fonsksiyonalrını nasıl olacağını tanımlayan bir tasarım diyebilirirz.daha sonrasında bu tasarımla oluşturulan objeleri proje içerisinde kullanabiliyoruz.Yine aynı mantıkta buna objelerin oluşturulacağı şablonda diyebiliriz.
@@ -179,3 +193,28 @@ const YeniUrun = new GelismisUrun("4 yıl", "Mağazada", "Xiaomi", "Mi 11", 7000
 console.log(YeniUrun);
 
 YeniUrun.urunuOku();
+
+//FETCH İLE APU SORGULARI
+const button = document.querySelector("#veri-buton");
+button.addEventListener("click", veriCek);
+
+//1.yol
+function veriCek() {
+  fetch("https://jsonplaceholder.typicode.com/users/")
+    .then((response) => response.json()) //atılan istek başarılı olursa
+    .then((users) => console.log(users))
+    .catch((err) => console.log(err)); //atılan istek başarırsız olursa
+}
+
+//2.yol
+async function veriCek1() {
+  try {
+    const response = await fetch(
+      "https://jsonplaceholder.typicode.com/users/1"
+    );
+    const users = response.json();
+    console.log(users);
+  } catch (error) {
+    console.log(error);
+  }
+}
